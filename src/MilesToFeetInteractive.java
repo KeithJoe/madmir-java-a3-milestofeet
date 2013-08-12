@@ -1,12 +1,24 @@
+import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class MilesToFeetInteractive {
 
 	public static void main(String[] args) {
-		// -------INSTRUCTIONS-------
-		// 1. Refer to exercise 4 on page 113 of the Joyce Farrell book (chapter 2 PDF)
-		// 2. In this file, complete part (b) of this exercise
-		// 3. For this class, you WILL receive an input from the user.
+		
+		//Declare an initialize name constant FEET_PER_MILE
+		final int FEET_PER_MILE = 5280;
+		//Declare and initialize variables
+		float uncleMiles = 85f;
+		float uncleFeet = uncleMiles * 	FEET_PER_MILE;
+		Scanner sc = new Scanner(System.in);
+				
+		//Display output
+		System.out.print("Enter a number: ");
+		uncleMiles = sc.nextFloat();
+		System.out.println("The distance to my uncles house is " + uncleMiles + "miles");
+		System.out.println("That's " + uncleFeet + "feet");
+		JOptionPane.showMessageDialog(null, "How many miles to your uncles house? " + uncleMiles + " miles. Thats " + uncleFeet + "feet!");
+		
+			}	
 
 	}
-
-}
